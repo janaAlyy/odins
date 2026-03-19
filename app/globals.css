@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #05070c;
+  --panel: #0a0f1a;
+  --text: #eaf0ff;
+  --muted: #9aa7bd;
+  --blue: #2b6cff;
+  --silver: #b8c0cc;
+  --stroke: rgba(184, 192, 204, 0.18);
+  --bg-rgb: 5 7 12;
+  --panel-rgb: 10 15 26;
+  --text-rgb: 234 240 255;
+  --muted-rgb: 154 167 189;
+  --blue-rgb: 43 108 255;
+  --silver-rgb: 184 192 204;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 10% 8%, rgba(43, 108, 255, 0.08), transparent 35%),
+    radial-gradient(circle at 92% 12%, rgba(184, 192, 204, 0.08), transparent 28%),
+    var(--bg);
+  color: var(--text);
+  min-height: 100%;
+}
+
+body {
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(43, 108, 255, 0.25);
+  color: var(--text);
+}
+
+@layer utilities {
+  .surface {
+    @apply rounded-panel border border-stroke bg-panel/80 shadow-panel backdrop-blur-sm;
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-20;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

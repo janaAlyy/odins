@@ -1,0 +1,22 @@
+import Image from "next/image";
+
+import { Container } from "@/components/ui/container";
+
+type EyeDividerProps = {
+  className?: string;
+};
+
+export function EyeDivider({ className }: EyeDividerProps) {
+  return (
+    <div className={`py-3 ${className ?? ""}`} aria-hidden>
+      <Container>
+        <div className="relative flex items-center justify-center">
+          <div className="absolute left-0 right-0 h-px bg-stroke" />
+          <div className="relative bg-bg px-4 opacity-55">
+            <Image src="/brand/odin-eye.svg" alt="" width={30} height={15} />
+          </div>
+        </div>
+      </Container>
+    </div>
+  );
+}
