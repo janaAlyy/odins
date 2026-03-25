@@ -15,9 +15,9 @@ export function Logo({ compact = false }: LogoProps) {
       <Image
         src="/brand/odin_logo_no_bg.png"
         alt="ODIN logo"
-        width={compact ? 38 : 46}
-        height={compact ? 38 : 46}
-        className="object-contain"
+        width={compact ? 64 : 82}
+        height={compact ? 64 : 82}
+        className="h-auto w-auto object-contain"
         priority
       />
     </Link>
