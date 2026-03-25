@@ -43,7 +43,7 @@ export const intelligentLayer: ServiceCard[] = [
     ]
   },
   {
-    title: "AI Reporter (Fathy Reporter)",
+    title: "AI Reporter",
     bullets: [
       "Automated reporting",
       "Structured collection",
@@ -149,7 +149,7 @@ export const contactServiceOptions = [
   "Custom Accounting & Financial Systems",
   "Business Platforms",
   "AI Social Automation",
-  "AI Reporter (Fathy Reporter)",
+  "AI Reporter",
   "Embedded AI Assistant",
   "Full Enterprise Transformation"
 ];
