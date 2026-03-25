@@ -13,11 +13,11 @@ export function Logo({ compact = false }: LogoProps) {
       className="inline-flex items-center rounded-full px-1 py-1 transition hover:bg-white/5"
     >
       <Image
-        src="/brand/logo.jpeg"
+        src="/brand/odin_logo_no_bg.png"
         alt="ODIN logo"
         width={compact ? 38 : 46}
         height={compact ? 38 : 46}
-        className="rounded-lg border border-stroke/60"
+        className="object-contain"
         priority
       />
     </Link>
